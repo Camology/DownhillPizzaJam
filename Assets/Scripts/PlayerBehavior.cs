@@ -6,6 +6,7 @@ public class PlayerBehavior : MonoBehaviour {
 	private Rigidbody rb;
 	float initialRotation;
 	float MAXROTATION = 0.2f;
+	bool onRoad = true;
 
 	// Use this for initialization
 	void Start () {
@@ -36,6 +37,19 @@ public class PlayerBehavior : MonoBehaviour {
 		if(Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/3,ForceMode.Impulse);
+		}
+
+		float jumpVal = Input.GetAxis("jump") * Time.deltaTime * 100.0f;
+
+		if(jumpVal > 0 && onRoad) {
+			rb.AddForce(0,7f,0, ForceMode.Impulse);
+			onRoad = false;
+		}
+	}
+
+	void OnCollisionEnter(Collision col) { 
+		if (col.gameObject.tag == "floor") { 
+			onRoad = true;
 		}
 	}
 }
