@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour {
 	private Rigidbody rb;
 	float initialRotation;
+	float MAXROTATION = 0.2f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +25,13 @@ public class PlayerBehavior : MonoBehaviour {
 		float rotation = this.transform.rotation.y;
 		float diff = initialRotation - rotation;
 		Debug.Log(diff);
-		if(diff > 0.2) {
-			this.transform.Rotate(0,0.5f,0);
+		if(diff > MAXROTATION) {
+			this.transform.Rotate(0,0.3f,0);
 		}
-		if(diff < -0.2) {
-			this.transform.Rotate(0,-0.5f,0);
+		if(diff < -MAXROTATION) {
+			this.transform.Rotate(0,-0.3f,0);
 		}
-		if(Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= 0.2 ) {
+		if(Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/4,ForceMode.Impulse);
 		}
