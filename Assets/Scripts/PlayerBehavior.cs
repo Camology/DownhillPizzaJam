@@ -17,14 +17,16 @@ public class PlayerBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		movement();
-		
+		if(rb.velocity.x < 10) {
+			rb.AddForce(1f,0,0, ForceMode.Impulse);
+		}
 	}
 
 	void movement() {
 		float steer = Input.GetAxis("steer") * Time.deltaTime * 100.0f;
 		float rotation = this.transform.rotation.y;
 		float diff = initialRotation - rotation;
-		Debug.Log(diff);
+
 		if(diff > MAXROTATION) {
 			this.transform.Rotate(0,0.3f,0);
 		}
@@ -33,7 +35,7 @@ public class PlayerBehavior : MonoBehaviour {
 		}
 		if(Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
-			rb.AddForce(0,0,-steer/4,ForceMode.Impulse);
+			rb.AddForce(0,0,-steer/3,ForceMode.Impulse);
 		}
 	}
 }
