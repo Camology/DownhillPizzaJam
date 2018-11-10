@@ -34,7 +34,7 @@ public class PlayerBehavior : MonoBehaviour {
 		if(diff < -MAXROTATION) {
 			this.transform.Rotate(0,-0.3f,0);
 		}
-		if(Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
+		if(onRoad && Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/3,ForceMode.Impulse);
 		}
