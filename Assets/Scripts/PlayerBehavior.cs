@@ -6,7 +6,7 @@ public class PlayerBehavior : MonoBehaviour {
 	private Rigidbody rb;
 	Quaternion initialRotation;
 	float MAXROTATION = 0.2f;
-	bool onRoad = false;
+	bool onRoad = true;
 	int score = 0;
 	int playerHealth = 6;
 
@@ -17,14 +17,14 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (Time.timeScale == 1){
 			movement();
 			if(rb.velocity.x < 20) {
 				rb.AddForce(1f,0,0, ForceMode.Impulse);
 			}
 
-		if(rb.velocity.y < 2 && !onRoad) {
+		if(rb.velocity.y < 3 && !onRoad) {
 			rb.AddForce(0,-25f,0,ForceMode.Acceleration);
 		}
 		if(Mathf.Abs(rb.rotation.z) > 0.2f || this.initialRotation.x - rb.rotation.x > 0f) {
@@ -49,7 +49,7 @@ public class PlayerBehavior : MonoBehaviour {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/1.5f,ForceMode.Impulse);
 		} else if (steer == 0f) {
-			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.5f);
+			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.7f);
 			this.transform.rotation = Quaternion.Slerp(transform.rotation, this.initialRotation, Time.deltaTime * 6f);
 		}
 
@@ -72,6 +72,8 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "damage" && playerHealth > 0) {
+            rb = GetComponent<Rigidbody>();
+            //rb.constraints = RigidbodyConstraints.FreezeRotationY;
 			--playerHealth;
 			onRoad = true;
             if (playerHealth == 0)
