@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour {
 	private Rigidbody rb;
-	float initialRotation;
+	Quaternion initialRotation;
 	float MAXROTATION = 0.2f;
 	bool onRoad = true;
+	int score = 0;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
-		initialRotation = this.transform.rotation.y;
+		initialRotation = this.transform.rotation;
 		
 	}
 	
@@ -26,7 +27,7 @@ public class PlayerBehavior : MonoBehaviour {
 	void movement() {
 		float steer = Input.GetAxis("steer") * Time.deltaTime * 100.0f;
 		float rotation = this.transform.rotation.y;
-		float diff = initialRotation - rotation;
+		float diff = initialRotation.y - rotation;
 
 		if(diff > MAXROTATION) {
 			this.transform.Rotate(0,0.3f,0);
@@ -43,13 +44,27 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if(jumpVal > 0 && onRoad) {
 			rb.AddForce(0,7f,0, ForceMode.Impulse);
-			onRoad = false;
 		}
 	}
 
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "floor") { 
 			onRoad = true;
+		}
+		if(col.gameObject.tag == "rail") {
+			this.transform.rotation = new Quaternion(0,90,0,0);
+			onRoad = true;
+
+		} 
+	}
+
+	void OnCollisionExit(Collision col) {
+		if(col.gameObject.tag == "floor") {
+			onRoad = false;
+		}
+		if(col.gameObject.tag == "rail") {
+			onRoad = false;
+			this.transform.rotation = initialRotation;
 		}
 	}
 }
