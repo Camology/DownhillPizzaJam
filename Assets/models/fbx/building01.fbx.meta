@@ -1,19 +1,32 @@
 fileFormatVersion: 2
-guid: e42530edfbe11c743b1825282db19726
+guid: 45db6e56b0cf54bd5acd543f0315c5fa
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: street
-    2100002: sidewalk
-    2100004: street_001__street_png
+    2100000: buildingMaterial
+    2100002: buildingWindowMaterial
+    2100004: buildingDoorMaterial
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-    7400000: Default Take
-    9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: buildingDoorMaterial
+    second: {fileID: 2100000, guid: 4809eea48af1949b887e4c39a58d9219, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: buildingMaterial
+    second: {fileID: 2100000, guid: 61b3d74573b5b40b8838eaf91ae2f43d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: buildingWindowMaterial
+    second: {fileID: 2100000, guid: 866e953275d3a4d2f9a79f00b995b4e1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,7 +78,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,7 +103,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

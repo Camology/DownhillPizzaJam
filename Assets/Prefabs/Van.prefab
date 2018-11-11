@@ -53,9 +53,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4232803850233604}
+  - component: {fileID: 65974569972374888}
   m_Layer: 0
   m_Name: Van
-  m_TagString: Untagged
+  m_TagString: damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298265205032710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -130.75284, y: 19.25719, z: 9.6662245}
+  m_LocalPosition: {x: -116.5, y: 17.05239, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4218915023118398}
@@ -263,3 +264,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669819818645046}
   m_Mesh: {fileID: 4300002, guid: bdfe24ce6ebe048e2a5fa2c9f6a80442, type: 3}
+--- !u!65 &65974569972374888
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298265205032710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.31, y: 3.5989952, z: 6.2457895}
+  m_Center: {x: 0, y: 1.5129299, z: 0.658689}

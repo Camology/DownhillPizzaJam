@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e42530edfbe11c743b1825282db19726
+guid: 3dd1e4b0fe70048f1a804f218d7993f2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -7,18 +7,16 @@ ModelImporter:
     400000: //RootNode
     2100000: street
     2100002: sidewalk
-    2100004: street_001__street_png
+    2100004: street.001
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-    7400000: Default Take
-    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -65,7 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

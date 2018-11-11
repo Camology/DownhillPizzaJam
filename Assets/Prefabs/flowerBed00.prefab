@@ -53,6 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4481933393598630}
+  - component: {fileID: 65991399872981310}
   m_Layer: 0
   m_Name: flowerBed00
   m_TagString: Untagged
@@ -1143,8 +1144,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017204624945450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133.5599, y: 18.850452, z: 12.637246}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -129.7, y: 18.58, z: -6.19}
+  m_LocalScale: {x: 2.0331, y: 2.0331, z: 2.0331}
   m_Children:
   - {fileID: 4157164019239834}
   - {fileID: 4907753538032666}
@@ -3788,3 +3789,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444273160803204}
   m_Mesh: {fileID: 4300002, guid: 6a5245a7bfa6c864382bdc43e4ee9c81, type: 3}
+--- !u!65 &65991399872981310
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017204624945450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.51, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e42530edfbe11c743b1825282db19726
+guid: 29c309b2d6ba94007be976d6dc1cedee
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,6 +8,7 @@ ModelImporter:
     2100000: street
     2100002: sidewalk
     2100004: street_001__street_png
+    2100006: streetLines__street_png
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube

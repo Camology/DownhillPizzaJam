@@ -64,7 +64,11 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "damage" && playerHealth > 0) {
-			// Eventually put stuff here
+			--playerHealth;
+			Destroy(col.gameObject, 1.0f);
+			if (playerHealth == 0) {
+				//Death
+			}
 		}
 		if (col.gameObject.tag == "floor") { 
 			onRoad = true;
