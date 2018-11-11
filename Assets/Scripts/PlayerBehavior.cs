@@ -24,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour {
 				rb.AddForce(1f,0,0, ForceMode.Impulse);
 			}
 
-		if(rb.velocity.y < 3 && !onRoad) {
+		if(rb.velocity.y < 2 && !onRoad) {
 			rb.AddForce(0,-25f,0,ForceMode.Acceleration);
 		}
 		if(Mathf.Abs(rb.rotation.z) > 0.2f || this.initialRotation.x - rb.rotation.x > 0f) {
