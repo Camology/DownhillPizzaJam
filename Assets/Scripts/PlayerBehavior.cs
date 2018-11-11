@@ -26,9 +26,10 @@ public class PlayerBehavior : MonoBehaviour {
 		if(rb.velocity.y < 4 && !onRoad) {
 			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
 		}
-		if(Mathf.Abs(rb.rotation.z) > 0.2f) {
-			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(rb.rotation.x,rb.rotation.y,0), 0.05f, 0.0f);
+		if(Mathf.Abs(rb.rotation.z) > 0.2f || this.initialRotation.x - rb.rotation.x > 0f) {
+			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(this.initialRotation.x,-this.initialRotation.y,0), 0.12f * Time.deltaTime, 0.0f);
 			transform.rotation = Quaternion.LookRotation(newDir);
+			//this.transform.RotateTowards(transform.forward, this.initialRotation, Time.deltaTime, 0.0f);
 		}
 	}
 
@@ -52,7 +53,8 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if(jumpVal > 0 && onRoad) {
 			onRoad = false;
-			rb.AddForce(2f,10f,0, ForceMode.Impulse);
+			rb.AddForce(3.5f,10f,0, ForceMode.Impulse);
+			this.transform.Rotate(-4f,0,0);
 		}
 	}
 
@@ -69,6 +71,7 @@ public class PlayerBehavior : MonoBehaviour {
             rb = GetComponent<Rigidbody>();
             //rb.constraints = RigidbodyConstraints.FreezeRotationY;
 			--playerHealth;
+			onRoad = true;
             if (playerHealth == 0)
             {
                 //Death

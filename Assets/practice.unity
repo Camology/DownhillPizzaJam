@@ -1512,6 +1512,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281588128}
   m_Mesh: {fileID: 4300008, guid: c769d95f85822e848a39a895c3eb6b5c, type: 3}
+--- !u!1001 &1392273508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -106.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16.789803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.72618604
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6874983
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187492981253896, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1392273509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1084898103720966, guid: 44c156fe5c175c049842e9846191d15c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1392273508}
+--- !u!65 &1392273510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392273509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 5.9859}
+  m_Center: {x: 0, y: 1, z: -0.3541548}
 --- !u!1 &1438145179
 GameObject:
   m_ObjectHideFlags: 0
