@@ -1,26 +1,16 @@
 fileFormatVersion: 2
-guid: 76029351833e64d59b0cc268328f99ee
+guid: db7fb6033a4614ab9828cc37eb9bec55
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cube
-    100004: Cylinder
     400000: //RootNode
-    400002: Cube
-    400004: Cylinder
-    2100000: carTire
-    2100002: carTireHubcap
-    2100004: carMaterial
-    2100006: CarwindshieldMateril
-    2300000: Cube
-    2300002: Cylinder
-    3300000: Cube
-    3300002: Cylinder
-    4300000: Cylinder
-    4300002: Cube
-    7400000: Default Take
-    9500000: //RootNode
+    2100000: buildingMaterial
+    2100002: buildingWindowMaterial
+    2100004: buildingDoorMaterial
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -73,7 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -98,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
