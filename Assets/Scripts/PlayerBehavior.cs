@@ -18,17 +18,19 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movement();
-		if(rb.velocity.x < 10) {
-			rb.AddForce(1f,0,0, ForceMode.Impulse);
-		}
+		if (Time.timeScale == 1){
+			movement();
+			if(rb.velocity.x < 10) {
+				rb.AddForce(1f,0,0, ForceMode.Impulse);
+			}
 
-		if(rb.velocity.y < 4 && !onRoad) {
-			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
-		}
-		if(Mathf.Abs(rb.rotation.z) > 0.2f) {
-			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(rb.rotation.x,rb.rotation.y,0), 0.05f, 0.0f);
-			transform.rotation = Quaternion.LookRotation(newDir);
+			if(rb.velocity.y < 4 && !onRoad) {
+				rb.AddForce(0,-20f,0,ForceMode.Acceleration);
+			}
+			if(Mathf.Abs(rb.rotation.z) > 0.2f) {
+				Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(rb.rotation.x,rb.rotation.y,0), 0.05f, 0.0f);
+				transform.rotation = Quaternion.LookRotation(newDir);
+			}
 		}
 	}
 

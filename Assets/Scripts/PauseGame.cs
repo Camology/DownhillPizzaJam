@@ -14,8 +14,8 @@ public class PauseGame : MonoBehaviour {
 	}
 
 	private void Update(){
-		checkPause();
-		checkHealth();	
+		checkHealth();
+		checkPause();			
 	}
 
 	void checkPause() {
