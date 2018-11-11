@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4187492981253896}
   - component: {fileID: 65064731225724986}
   - component: {fileID: 54575843348281288}
+  - component: {fileID: 114911477134033802}
   m_Layer: 0
   m_Name: car
   m_TagString: damage
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091000492684818}
   m_LocalRotation: {x: -0, y: 0.72618604, z: -0, w: 0.6874983}
-  m_LocalPosition: {x: -121.67, y: 16.789803, z: 1.38}
+  m_LocalPosition: {x: -106.33, y: 16.789803, z: 0.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4721530239353212}
@@ -216,3 +217,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2918777, y: 2.4407825, z: 5.9859004}
   m_Center: {x: 0.45119858, y: 1.1858683, z: -0.35415483}
+--- !u!114 &114911477134033802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091000492684818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4351d4765799db74cb78816f14e3c559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionObject: {fileID: 198458429322758708, guid: c154f8474aa319848b08acb7e686b5b5,
+    type: 2}

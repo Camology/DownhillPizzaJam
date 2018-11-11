@@ -65,7 +65,6 @@ public class PlayerBehavior : MonoBehaviour {
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "damage" && playerHealth > 0) {
 			--playerHealth;
-			Destroy(col.gameObject);
 			if (playerHealth == 0) {
 				//Death
 			}
