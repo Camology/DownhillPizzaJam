@@ -48,14 +48,17 @@ public class PlayerBehavior : MonoBehaviour {
         if(onRoad && Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/1.5f,ForceMode.Impulse);
+		} else if (steer == 0f) {
+			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.3f);
+			this.transform.rotation = this.initialRotation;
 		}
 
 		float jumpVal = Input.GetAxis("jump") * Time.deltaTime * 100.0f;
 
 		if(jumpVal > 0 && onRoad) {
 			onRoad = false;
-			rb.AddForce(4f,10f,0, ForceMode.Impulse);
-			this.transform.Rotate(-4f,0,0);
+			rb.AddForce(2f,10f,0, ForceMode.Impulse);
+			this.transform.Rotate(-8f,0,0);
 		}
 	}
 
