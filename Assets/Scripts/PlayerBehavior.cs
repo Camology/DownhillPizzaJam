@@ -6,7 +6,7 @@ public class PlayerBehavior : MonoBehaviour {
 	private Rigidbody rb;
 	Quaternion initialRotation;
 	float MAXROTATION = 0.2f;
-	bool onRoad = true;
+	bool onRoad = false;
 	int score = 0;
 	int playerHealth = 6;
 
@@ -72,8 +72,6 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "damage" && playerHealth > 0) {
-            rb = GetComponent<Rigidbody>();
-            //rb.constraints = RigidbodyConstraints.FreezeRotationY;
 			--playerHealth;
 			onRoad = true;
             if (playerHealth == 0)
