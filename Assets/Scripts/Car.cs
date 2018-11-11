@@ -10,7 +10,10 @@ public class Car : MonoBehaviour {
 	}
 
 	void Update() {
-		rbody.AddForce(-20f,0,0);
+		if (Time.timeScale != 0){
+			rbody.AddForce(-20f,0,0);
+		} 
+		
 	}
 	void OnCollisionEnter(Collision other) {
 		if (other.gameObject.tag == "Player") {

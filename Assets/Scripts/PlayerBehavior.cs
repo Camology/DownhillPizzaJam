@@ -18,13 +18,15 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movement();
-		if(rb.velocity.x < 10) {
-			rb.AddForce(1f,0,0, ForceMode.Impulse);
-		}
+		if (Time.timeScale != 0){
+			movement();
+			if(rb.velocity.x < 10) {
+				rb.AddForce(1f,0,0, ForceMode.Impulse);
+			}
 
-		if(rb.velocity.y < 0 && !onRoad) {
-			rb.AddForce(0,-10f,0,ForceMode.Acceleration);
+			if(rb.velocity.y < 0 && !onRoad) {
+				rb.AddForce(0,-10f,0,ForceMode.Acceleration);
+			}
 		}
 	}
 
