@@ -17,7 +17,7 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (Time.timeScale == 1){
 			movement();
 			if(rb.velocity.x < 20) {
@@ -49,7 +49,7 @@ public class PlayerBehavior : MonoBehaviour {
 			this.transform.Rotate(0,steer,0);
 			rb.AddForce(0,0,-steer/1.5f,ForceMode.Impulse);
 		} else if (steer == 0f) {
-			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.7f);
+			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.5f);
 			this.transform.rotation = Quaternion.Slerp(transform.rotation, this.initialRotation, Time.deltaTime * 6f);
 		}
 
