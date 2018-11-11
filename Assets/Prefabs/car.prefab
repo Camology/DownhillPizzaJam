@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4187492981253896}
   - component: {fileID: 65064731225724986}
   - component: {fileID: 54575843348281288}
-  - component: {fileID: 114911477134033802}
+  - component: {fileID: 114921302893400774}
   m_Layer: 0
   m_Name: car
   m_TagString: damage
@@ -217,7 +217,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2918777, y: 2.4407825, z: 5.9859004}
   m_Center: {x: 0.45119858, y: 1.1858683, z: -0.35415483}
---- !u!114 &114911477134033802
+--- !u!114 &114921302893400774
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091000492684818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4351d4765799db74cb78816f14e3c559, type: 3}
+  m_Script: {fileID: 11500000, guid: 464b9a6061dafb74d87ce26a065f47ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionObject: {fileID: 198458429322758708, guid: c154f8474aa319848b08acb7e686b5b5,
