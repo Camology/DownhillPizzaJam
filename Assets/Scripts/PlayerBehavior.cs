@@ -18,7 +18,6 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(rb.velocity.y);
 		movement();
 		if(rb.velocity.x < 10) {
 			rb.AddForce(1f,0,0, ForceMode.Impulse);
@@ -26,6 +25,10 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if(rb.velocity.y < 4 && !onRoad) {
 			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
+		}
+		if(Mathf.Abs(rb.rotation.z) > 0.2f) {
+			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(rb.rotation.x,rb.rotation.y,0), 0.05f, 0.0f);
+			transform.rotation = Quaternion.LookRotation(newDir);
 		}
 	}
 
@@ -49,14 +52,13 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if(jumpVal > 0 && onRoad) {
 			onRoad = false;
-			rb.AddForce(0,10f,0, ForceMode.Impulse);
+			rb.AddForce(2f,10f,0, ForceMode.Impulse);
 		}
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (playerHealth > 0) {
 			--playerHealth;
-			Debug.Log(playerHealth);
 			if (playerHealth == 0) {
 				//Death
 			}
@@ -65,7 +67,7 @@ public class PlayerBehavior : MonoBehaviour {
 	void OnCollisionEnter(Collision col) { 
 		if (col.gameObject.tag == "damage" && playerHealth > 0) {
             rb = GetComponent<Rigidbody>();
-            rb.constraints = RigidbodyConstraints.FreezeRotationY;
+            //rb.constraints = RigidbodyConstraints.FreezeRotationY;
 			--playerHealth;
             if (playerHealth == 0)
             {
