@@ -13,7 +13,7 @@ public class PauseGame : MonoBehaviour {
 		gameOverPanel.SetActive(false);	
 	}
 
-	private void Update(){
+	private void LateUpdate(){
 		checkHealth();
 		checkPause();			
 	}

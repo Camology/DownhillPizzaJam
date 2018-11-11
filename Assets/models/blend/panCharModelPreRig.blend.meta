@@ -1,80 +1,17 @@
 fileFormatVersion: 2
-guid: fd542fff418a22349802a74ec09af73f
+guid: 6ece3e8ad9cf049cfa612aa6a67d36f0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: face
-    100004: foot_L
-    100006: foot_R
-    100008: forearm_L
-    100010: forearm_R
-    100012: hand_L
-    100014: hand_R
-    100016: heel_02_L
-    100018: heel_02_R
-    100020: metarig
-    100022: pelvis_L
-    100024: pelvis_R
-    100026: shin_L
-    100028: shin_R
-    100030: shoulder_L
-    100032: shoulder_R
-    100034: Sphere
-    100036: spine
-    100038: spine_001
-    100040: spine_002
-    100042: spine_003
-    100044: spine_004
-    100046: spine_005
-    100048: spine_006
-    100050: thigh_L
-    100052: thigh_R
-    100054: toe_L
-    100056: toe_R
-    100058: upper_arm_L
-    100060: upper_arm_R
     400000: //RootNode
-    400002: face
-    400004: foot_L
-    400006: foot_R
-    400008: forearm_L
-    400010: forearm_R
-    400012: hand_L
-    400014: hand_R
-    400016: heel_02_L
-    400018: heel_02_R
-    400020: metarig
-    400022: pelvis_L
-    400024: pelvis_R
-    400026: shin_L
-    400028: shin_R
-    400030: shoulder_L
-    400032: shoulder_R
-    400034: Sphere
-    400036: spine
-    400038: spine_001
-    400040: spine_002
-    400042: spine_003
-    400044: spine_004
-    400046: spine_005
-    400048: spine_006
-    400050: thigh_L
-    400052: thigh_R
-    400054: toe_L
-    400056: toe_R
-    400058: upper_arm_L
-    400060: upper_arm_R
-    2100000: unnamed
-    2100002: skinMaterial
-    2100004: hairMaterial
-    2100006: jacketMaterial
-    2100008: pantsMaterial
-    2100010: shoeMaterial
+    2100000: skinMaterial
+    2100002: hairMaterial
+    2100004: jacketMaterial
+    2100006: pantsMaterial
+    2100008: shoeMaterial
     2300000: //RootNode
-    2300002: Sphere
     3300000: //RootNode
-    3300002: Sphere
     4300000: Sphere
     7400000: Default Take
     9500000: //RootNode
