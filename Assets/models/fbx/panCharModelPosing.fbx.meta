@@ -1,83 +1,102 @@
 fileFormatVersion: 2
-guid: fd542fff418a22349802a74ec09af73f
+guid: 175cb03f474d74988992c41b3d52dd22
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
+    100000: Camera
     100002: face
-    100004: foot_L
-    100006: foot_R
-    100008: forearm_L
-    100010: forearm_R
-    100012: hand_L
-    100014: hand_R
-    100016: heel_02_L
-    100018: heel_02_R
-    100020: metarig
-    100022: pelvis_L
-    100024: pelvis_R
-    100026: shin_L
-    100028: shin_R
-    100030: shoulder_L
-    100032: shoulder_R
-    100034: Sphere
-    100036: spine
-    100038: spine_001
-    100040: spine_002
-    100042: spine_003
-    100044: spine_004
-    100046: spine_005
-    100048: spine_006
-    100050: thigh_L
-    100052: thigh_R
-    100054: toe_L
-    100056: toe_R
-    100058: upper_arm_L
-    100060: upper_arm_R
-    400000: //RootNode
+    100004: face_end
+    100006: foot.L
+    100008: foot.R
+    100010: forearm.L
+    100012: forearm.R
+    100014: hand.L
+    100016: hand.L_end
+    100018: hand.R
+    100020: hand.R_end
+    100022: heel.02.L
+    100024: heel.02.L_end
+    100026: heel.02.R
+    100028: heel.02.R_end
+    100030: Lamp
+    100032: metarig
+    100034: //RootNode
+    100036: pelvis.L
+    100038: pelvis.L_end
+    100040: pelvis.R
+    100042: pelvis.R_end
+    100044: shin.L
+    100046: shin.R
+    100048: shoulder.L
+    100050: shoulder.R
+    100052: Sphere
+    100054: spine
+    100056: spine.001
+    100058: spine.002
+    100060: spine.003
+    100062: spine.004
+    100064: spine.005
+    100066: spine.006
+    100068: thigh.L
+    100070: thigh.R
+    100072: toe.L
+    100074: toe.L_end
+    100076: toe.R
+    100078: toe.R_end
+    100080: upper_arm.L
+    100082: upper_arm.R
+    400000: Camera
     400002: face
-    400004: foot_L
-    400006: foot_R
-    400008: forearm_L
-    400010: forearm_R
-    400012: hand_L
-    400014: hand_R
-    400016: heel_02_L
-    400018: heel_02_R
-    400020: metarig
-    400022: pelvis_L
-    400024: pelvis_R
-    400026: shin_L
-    400028: shin_R
-    400030: shoulder_L
-    400032: shoulder_R
-    400034: Sphere
-    400036: spine
-    400038: spine_001
-    400040: spine_002
-    400042: spine_003
-    400044: spine_004
-    400046: spine_005
-    400048: spine_006
-    400050: thigh_L
-    400052: thigh_R
-    400054: toe_L
-    400056: toe_R
-    400058: upper_arm_L
-    400060: upper_arm_R
-    2100000: unnamed
-    2100002: skinMaterial
-    2100004: hairMaterial
-    2100006: jacketMaterial
-    2100008: pantsMaterial
-    2100010: shoeMaterial
-    2300000: //RootNode
-    2300002: Sphere
-    3300000: //RootNode
-    3300002: Sphere
+    400004: face_end
+    400006: foot.L
+    400008: foot.R
+    400010: forearm.L
+    400012: forearm.R
+    400014: hand.L
+    400016: hand.L_end
+    400018: hand.R
+    400020: hand.R_end
+    400022: heel.02.L
+    400024: heel.02.L_end
+    400026: heel.02.R
+    400028: heel.02.R_end
+    400030: Lamp
+    400032: metarig
+    400034: //RootNode
+    400036: pelvis.L
+    400038: pelvis.L_end
+    400040: pelvis.R
+    400042: pelvis.R_end
+    400044: shin.L
+    400046: shin.R
+    400048: shoulder.L
+    400050: shoulder.R
+    400052: Sphere
+    400054: spine
+    400056: spine.001
+    400058: spine.002
+    400060: spine.003
+    400062: spine.004
+    400064: spine.005
+    400066: spine.006
+    400068: thigh.L
+    400070: thigh.R
+    400072: toe.L
+    400074: toe.L_end
+    400076: toe.R
+    400078: toe.R_end
+    400080: upper_arm.L
+    400082: upper_arm.R
+    2000000: Camera
+    2100000: skinMaterial
+    2100002: hairMaterial
+    2100004: jacketMaterial
+    2100006: pantsMaterial
+    2100008: shoeMaterial
     4300000: Sphere
-    7400000: Default Take
     9500000: //RootNode
+    10800000: Lamp
+    13700000: Sphere
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -129,7 +148,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

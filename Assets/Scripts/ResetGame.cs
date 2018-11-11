@@ -21,7 +21,7 @@ public class ResetGame : MonoBehaviour {
 	}
 
 	public void RestartGame() {
-		Time.timeScale = 1;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		Time.timeScale = 1;
 	}
 }

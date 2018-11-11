@@ -18,10 +18,11 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movement();
-		if(rb.velocity.x < 10) {
-			rb.AddForce(1f,0,0, ForceMode.Impulse);
-		}
+		if (Time.timeScale == 1){
+			movement();
+			if(rb.velocity.x < 10) {
+				rb.AddForce(1f,0,0, ForceMode.Impulse);
+			}
 
 		if(rb.velocity.y < 4 && !onRoad) {
 			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
@@ -29,7 +30,7 @@ public class PlayerBehavior : MonoBehaviour {
 		if(Mathf.Abs(rb.rotation.z) > 0.2f || this.initialRotation.x - rb.rotation.x > 0f) {
 			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(this.initialRotation.x,-this.initialRotation.y,0), 0.12f * Time.deltaTime, 0.0f);
 			transform.rotation = Quaternion.LookRotation(newDir);
-			//this.transform.RotateTowards(transform.forward, this.initialRotation, Time.deltaTime, 0.0f);
+			}
 		}
 	}
 
