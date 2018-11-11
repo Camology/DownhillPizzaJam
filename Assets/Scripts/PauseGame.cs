@@ -6,12 +6,16 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour {
 
 	public GameObject pausePanel;
+	public GameObject gameOverPanel;
+	public PlayerBehavior playerScript;
 	private void Awake(){
-		pausePanel.SetActive(false);	
+		pausePanel.SetActive(false);
+		gameOverPanel.SetActive(false);	
 	}
 
-	private void LateUpdate(){
-		checkPause();	
+	private void Update(){
+		checkPause();
+		checkHealth();	
 	}
 
 	void checkPause() {
@@ -20,8 +24,20 @@ public class PauseGame : MonoBehaviour {
 		}
 	}
 
+	void checkHealth(){
+		int health = playerScript.getHealth();
+		if (health < 1){
+			gameOver();
+		} 
+	}
+
 	void pauseGame(bool active){
 		Time.timeScale = System.Convert.ToSingle(active);
 		pausePanel.SetActive(!active);
+	}
+
+	void gameOver() {
+		Time.timeScale = 0;
+		gameOverPanel.SetActive(true);
 	}
 }
