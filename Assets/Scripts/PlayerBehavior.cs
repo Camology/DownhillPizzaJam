@@ -8,6 +8,7 @@ public class PlayerBehavior : MonoBehaviour {
 	float MAXROTATION = 0.2f;
 	bool onRoad = true;
 	int score = 0;
+	int playerHealth = 6;
 
 	// Use this for initialization
 	void Start () {
@@ -52,7 +53,19 @@ public class PlayerBehavior : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter(Collider other) {
+		if (playerHealth > 0) {
+			--playerHealth;
+			Debug.Log(playerHealth);
+			if (playerHealth == 0) {
+				//Death
+			}
+		}
+	}
 	void OnCollisionEnter(Collision col) { 
+		if (col.gameObject.tag == "damage" && playerHealth > 0) {
+			// Eventually put stuff here
+		}
 		if (col.gameObject.tag == "floor") { 
 			onRoad = true;
 		}
@@ -74,5 +87,9 @@ public class PlayerBehavior : MonoBehaviour {
 		if(col.gameObject.tag == "pizza") {
 			score++;
 		}
+	}
+
+	public int getHealth() {
+		return playerHealth;
 	}
 }

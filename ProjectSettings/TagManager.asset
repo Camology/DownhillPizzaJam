@@ -6,6 +6,7 @@ TagManager:
   tags:
   - floor
   - rail
+  - damage
   layers:
   - Default
   - TransparentFX
