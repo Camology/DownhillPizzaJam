@@ -6,12 +6,27 @@ public class EnvironmentSpawners : MonoBehaviour {
 	public GameObject player;
 	public GameObject car;
 	public GameObject building;
+	public GameObject streetObj;
 	public GameObject street;
+	public float levelLength = 500f;
+	float playerHeight = 5f;
 
 	// Use this for initialization
 	void Start () {
+		street = Instantiate(streetObj);
+		MeshRenderer streetMesh = street.GetComponent<MeshRenderer>();
+		float initPosX = street.transform.position.x - streetMesh.bounds.size.x / 2.0f;
+		Vector3 temp = street.transform.localScale;
+		float logScale = Mathf.Ceil(Mathf.Log10(temp.x));
+		temp.x = levelLength * (logScale * 10);
+		street.transform.localScale = temp;
+
+        temp = street.transform.position;
+		temp.x = initPosX + streetMesh.bounds.size.x / 2.0f;
+		temp.y -= playerHeight;
+		street.transform.position = temp;
 		InvokeRepeating("SpawnCar",0,1f);
-		SpawnBuildings(10);
+		SpawnBuildings();
 	}
 	
 	// Update is called once per frame
@@ -26,11 +41,18 @@ public class EnvironmentSpawners : MonoBehaviour {
 		newCar.transform.position += temp;
 		Destroy(newCar,3f);
     }
-	void SpawnBuildings(int numBuildings) {
+	void SpawnBuildings() {
+		float lengthCovered = 0f;
 		float streetWidth = street.GetComponent<MeshRenderer>().bounds.size.z;
+		float streetLength = street.GetComponent<MeshRenderer>().bounds.size.x;
 		float nextBuildingX = 0f;
+		float alleyLength = 3f;
+		bool firstLoop = true;
+
 		Vector3 temp;
-		for (int i = 0; i < numBuildings; i++) {
+		Debug.Log("street wdith"+levelLength);
+		while (lengthCovered < streetLength) {
+			Debug.Log("length covered: "+lengthCovered);
 			GameObject newBuilding = Instantiate(building);
 			MeshRenderer mesh = newBuilding.GetComponent<MeshRenderer>();
 			
@@ -42,10 +64,12 @@ public class EnvironmentSpawners : MonoBehaviour {
 			newBuilding.transform.localScale = tempScale;
 
 			// Update building position
-			if(i == 0) {
+			if(firstLoop) {
 				nextBuildingX = newBuilding.transform.position.x - mesh.bounds.size.x / 2;
+				firstLoop = false;
 			}
 			nextBuildingX += mesh.bounds.size.x / 2;
+			lengthCovered += mesh.bounds.size.x / 2;
 
 			var newBottom = mesh.bounds.center.y - mesh.bounds.size.y / 2;
 			Vector3 tempPos = newBuilding.transform.position;
@@ -54,8 +78,8 @@ public class EnvironmentSpawners : MonoBehaviour {
 			newBuilding.transform.position = tempPos;
 			
 			// Update position of next building
-			nextBuildingX += mesh.bounds.size.x / 2;
-			nextBuildingX += 3f;
+			nextBuildingX += mesh.bounds.size.x / 2 + alleyLength;
+			lengthCovered += mesh.bounds.size.x / 2 + alleyLength;
 
 			newBuilding.transform.Rotate(30f,0,0);
 			// Make identical building on other side of street
@@ -64,14 +88,9 @@ public class EnvironmentSpawners : MonoBehaviour {
 			tempPos = mirrorBuilding.transform.position;
 			mirrorBuilding.transform.Rotate(0,0,180f);
 
-			// I couldn't figure out how to calculate much to translate the mirror by
-			/*
-			float weirdOffset = (mesh.bounds.center.z - mesh.bounds.size.z/2) - 
-								(mirrorRender.bounds.center.z - mirrorRender.bounds.size.z/2);
 			float buildingWdith = mirrorRender.bounds.size.z;
-			tempPos.z -= (streetWidth + buildingWdith + weirdOffset);
-			*/
-			tempPos.z -= 29.5f;
+			tempPos.z -= (streetWidth + buildingWdith);
+
 			mirrorBuilding.transform.position = tempPos;
 		}
 	}
