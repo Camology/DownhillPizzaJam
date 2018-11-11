@@ -108,4 +108,8 @@ public class PlayerBehavior : MonoBehaviour {
 	public int getHealth() {
 		return playerHealth;
 	}
+
+	public void setHealth(int h) {
+		this.playerHealth = h;
+	}
 }

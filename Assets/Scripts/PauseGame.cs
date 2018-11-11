@@ -38,6 +38,7 @@ public class PauseGame : MonoBehaviour {
 
 	void gameOver() {
 		Time.timeScale = 0;
+		playerScript.setHealth(6);
 		gameOverPanel.SetActive(true);
 	}
 }
