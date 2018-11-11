@@ -22,6 +22,10 @@ public class PlayerBehavior : MonoBehaviour {
 		if(rb.velocity.x < 10) {
 			rb.AddForce(1f,0,0, ForceMode.Impulse);
 		}
+
+		if(rb.velocity.y < 0 && !onRoad) {
+			rb.AddForce(0,-10f,0,ForceMode.Acceleration);
+		}
 	}
 
 	void movement() {
@@ -43,6 +47,7 @@ public class PlayerBehavior : MonoBehaviour {
 		float jumpVal = Input.GetAxis("jump") * Time.deltaTime * 100.0f;
 
 		if(jumpVal > 0 && onRoad) {
+			onRoad = false;
 			rb.AddForce(0,7f,0, ForceMode.Impulse);
 		}
 	}
@@ -65,6 +70,9 @@ public class PlayerBehavior : MonoBehaviour {
 		if(col.gameObject.tag == "rail") {
 			onRoad = false;
 			this.transform.rotation = initialRotation;
+		}
+		if(col.gameObject.tag == "pizza") {
+			score++;
 		}
 	}
 }
