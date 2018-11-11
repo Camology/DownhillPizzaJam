@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnvironmentSpawners : MonoBehaviour {
+	public GameObject player;
 	public GameObject car;
 	public GameObject building;
 	public GameObject street;
@@ -20,7 +21,7 @@ public class EnvironmentSpawners : MonoBehaviour {
 
 	void SpawnCar() {
         GameObject newCar = Instantiate(car);
-		newCar.transform.position = transform.position;
+		newCar.transform.position = player.transform.position;
 		Vector3 temp = new Vector3(30.0f,0,0);
 		newCar.transform.position += temp;
 		Destroy(newCar,3f);
@@ -28,6 +29,7 @@ public class EnvironmentSpawners : MonoBehaviour {
 	void SpawnBuildings(int numBuildings) {
 		float streetWidth = street.GetComponent<MeshRenderer>().bounds.size.z;
 		float nextBuildingX = 0f;
+		Vector3 temp;
 		for (int i = 0; i < numBuildings; i++) {
 			GameObject newBuilding = Instantiate(building);
 			MeshRenderer mesh = newBuilding.GetComponent<MeshRenderer>();
@@ -53,7 +55,9 @@ public class EnvironmentSpawners : MonoBehaviour {
 			
 			// Update position of next building
 			nextBuildingX += mesh.bounds.size.x / 2;
+			nextBuildingX += 3f;
 
+			newBuilding.transform.Rotate(30f,0,0);
 			// Make identical building on other side of street
 			GameObject mirrorBuilding = Instantiate(newBuilding);
 			MeshRenderer mirrorRender = mirrorBuilding.GetComponent<MeshRenderer>();
