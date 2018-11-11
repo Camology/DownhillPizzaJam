@@ -1,40 +1,22 @@
 fileFormatVersion: 2
-guid: e472c0b73842f46edaa3550154c4fb92
+guid: fd542fff418a22349802a74ec09af73f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: buildingMaterial
-    2100002: buildingWindowMaterial
-    2100004: buildingDoorMaterial
+    2100000: unnamed
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Sphere
     7400000: Default Take
     9500000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: buildingDoorMaterial
-    second: {fileID: 2100000, guid: 8cdacfecb54663543af1eeb1c409fffa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: buildingMaterial
-    second: {fileID: 2100000, guid: a82f20cd0d09c174ba7cb40ad316a0e2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: buildingWindowMaterial
-    second: {fileID: 2100000, guid: 2222656a92cf7154db85cbfa9bf8e59d, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
