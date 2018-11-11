@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 5931faace87a3e04db16f0c52f0ae064
+guid: db7fb6033a4614ab9828cc37eb9bec55
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: street
-    2100002: sidewalk
+    2100000: buildingMaterial
+    2100002: buildingWindowMaterial
+    2100004: buildingDoorMaterial
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sidewalk
-    second: {fileID: 2100000, guid: c5f9888898445499499d59606aab940e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: street
-    second: {fileID: 2100000, guid: 7765fe06f007c41198d36c3c18cf0856, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
-    materialName: 1
+    materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

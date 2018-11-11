@@ -74,12 +74,62 @@ ModelImporter:
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AxelColor
+    second: {fileID: 2100000, guid: 17a91da5abd424bc48f40c952f9b8436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BoardTrimming
+    second: {fileID: 2100000, guid: 907440ce443944fdfb954aa03d21e420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: axelRodColor
+    second: {fileID: 2100000, guid: a4f8c64c2d14f4fc6880eacb1c08bcf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boardDecal__Untitled
+    second: {fileID: 2100000, guid: e37a244a8359646b78cfb6ac974deb97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boardPinstripe
+    second: {fileID: 2100000, guid: dc62f0600f4c8451dbbe13d63f93a265, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boardPrimaryColor
+    second: {fileID: 2100000, guid: 2e240f9e606a44f06aed38007594f9cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottomOfBoard
+    second: {fileID: 2100000, guid: 732aa6a51a601420b9201c61f881095e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hubcap
+    second: {fileID: 2100000, guid: 5017d98b4149c49e3886f3984905c09c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: streetColor
+    second: {fileID: 2100000, guid: 1587e9c29a74f4a67b9ef8817776de2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wheelColor
+    second: {fileID: 2100000, guid: c0110739368f0440ba8a3611fe6fd2d2, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
