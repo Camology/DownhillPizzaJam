@@ -1,20 +1,24 @@
 fileFormatVersion: 2
-guid: 2033e8849ec2b4d5a9ead1f0d9774a38
+guid: 1fe1111a1a0434dd0947fd123f27dd6a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: railMaterial
+    2100000: pizzaBoxMaterial__boxTexture
+    2100002: pizzaBoxLogoMaterial__pizza_png
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder
+    4300000: Cube
+    7400000: Default Take
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -61,7 +65,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -86,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

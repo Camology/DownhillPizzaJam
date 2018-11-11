@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: 2033e8849ec2b4d5a9ead1f0d9774a38
+guid: a15c1d4f183b844e18802a1c882c46bc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: railMaterial
+    2100000: pizzaBoxMaterial
+    2100002: pizzaBoxLogoMaterial
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder
+    4300000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
