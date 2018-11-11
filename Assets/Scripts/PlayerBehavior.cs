@@ -18,18 +18,19 @@ public class PlayerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log(rb.velocity.y);
 		movement();
 		if(rb.velocity.x < 10) {
 			rb.AddForce(1f,0,0, ForceMode.Impulse);
 		}
 
-		if(rb.velocity.y < 0 && !onRoad) {
-			rb.AddForce(0,-10f,0,ForceMode.Acceleration);
+		if(rb.velocity.y < 4 && !onRoad) {
+			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
 		}
 	}
 
 	void movement() {
-		float steer = Input.GetAxis("steer") * Time.deltaTime * 100.0f;
+		float steer = Input.GetAxis("steer") * Time.deltaTime * 75.0f;
 		float rotation = this.transform.rotation.y;
 		float diff = initialRotation.y - rotation;
 		
@@ -41,14 +42,14 @@ public class PlayerBehavior : MonoBehaviour {
         }
         if(onRoad && Mathf.Abs(steer) > 0.1 && Mathf.Abs(diff) <= MAXROTATION ) {
 			this.transform.Rotate(0,steer,0);
-			rb.AddForce(0,0,-steer/3,ForceMode.Impulse);
+			rb.AddForce(0,0,-steer/1.5f,ForceMode.Impulse);
 		}
 
 		float jumpVal = Input.GetAxis("jump") * Time.deltaTime * 100.0f;
 
 		if(jumpVal > 0 && onRoad) {
 			onRoad = false;
-			rb.AddForce(0,7f,0, ForceMode.Impulse);
+			rb.AddForce(0,10f,0, ForceMode.Impulse);
 		}
 	}
 
