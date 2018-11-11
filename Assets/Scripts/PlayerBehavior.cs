@@ -50,7 +50,7 @@ public class PlayerBehavior : MonoBehaviour {
 			rb.AddForce(0,0,-steer/1.5f,ForceMode.Impulse);
 		} else if (steer == 0f) {
 			rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0.7f);
-			this.transform.rotation = this.initialRotation;
+			this.transform.rotation = Quaternion.Slerp(transform.rotation, this.initialRotation, Time.deltaTime * 6f);
 		}
 
 		float jumpVal = Input.GetAxis("jump") * Time.deltaTime * 100.0f;
