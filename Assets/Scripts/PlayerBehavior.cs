@@ -54,7 +54,7 @@ public class PlayerBehavior : MonoBehaviour {
 
 		if(jumpVal > 0 && onRoad) {
 			onRoad = false;
-			rb.AddForce(3.5f,10f,0, ForceMode.Impulse);
+			rb.AddForce(4f,10f,0, ForceMode.Impulse);
 			this.transform.Rotate(-4f,0,0);
 		}
 	}
