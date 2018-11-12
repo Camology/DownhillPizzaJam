@@ -1,6 +1,6 @@
 # DownhillPizzaJam
 UAF Hackathon 2018 submission
 
-Full game available here: https://camology.github.io/DownhillPizzaJam-WebGL/
+Full game available here: https://camology.github.io/DownhillPizzaJam-WebGL/index.html
 
 A and D to move, W to jump. Sometimes it freezes just press escape twice.
