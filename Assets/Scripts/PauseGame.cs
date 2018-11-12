@@ -7,15 +7,19 @@ public class PauseGame : MonoBehaviour {
 
 	public GameObject pausePanel;
 	public GameObject gameOverPanel;
+
+	public GameObject winPanel;
 	public PlayerBehavior playerScript;
 	private void Awake(){
 		pausePanel.SetActive(false);
 		gameOverPanel.SetActive(false);	
+		winPanel.SetActive(false);
 	}
 
 	private void LateUpdate(){
 		checkHealth();
-		checkPause();			
+		checkPause();
+		//checkWin();			
 	}
 
 	void checkPause() {
@@ -31,14 +35,25 @@ public class PauseGame : MonoBehaviour {
 		} 
 	}
 
+	void checkWin(){
+		//check win here
+		winner();
+	}
+
 	void pauseGame(bool active){
 		Time.timeScale = System.Convert.ToSingle(active);
 		pausePanel.SetActive(!active);
 	}
+	
 
 	void gameOver() {
 		Time.timeScale = 0;
 		playerScript.setHealth(6);
 		gameOverPanel.SetActive(true);
+	}
+
+	void winner() {
+		Time.timeScale = 0;
+		winPanel.SetActive(true);
 	}
 }
