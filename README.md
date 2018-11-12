@@ -1,5 +1,5 @@
 # DownhillPizzaJam
-UAF Hackathon 2018 submission
+UAF Hackathon 2018 submission && first place winner in games category
 
 Full game available here: https://camology.github.io/DownhillPizzaJam-WebGL/index.html
 
