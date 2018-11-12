@@ -16,6 +16,6 @@ public class WinnerText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float score = playerScript.generateScore();
-		scoreBox.text = "Score: " +  score.ToString();
+		scoreBox.text = "Score: $" +  score.ToString();
 	}
 }

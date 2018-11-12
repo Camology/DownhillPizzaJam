@@ -10,6 +10,7 @@ public class PauseGame : MonoBehaviour {
 
 	public GameObject winPanel;
 	public PlayerBehavior playerScript;
+	bool hitEnd = false;
 	private void Awake(){
 		pausePanel.SetActive(false);
 		gameOverPanel.SetActive(false);	
@@ -19,7 +20,11 @@ public class PauseGame : MonoBehaviour {
 	private void LateUpdate(){
 		checkHealth();
 		checkPause();
-		//checkWin();			
+		checkWin();			
+	}
+
+	public void setHitEnd(bool status) {
+		this.hitEnd = status;
 	}
 
 	void checkPause() {
@@ -36,8 +41,9 @@ public class PauseGame : MonoBehaviour {
 	}
 
 	void checkWin(){
-		//check win here
-		winner();
+		if(hitEnd) { 
+			winner();
+		}
 	}
 
 	void pauseGame(bool active){

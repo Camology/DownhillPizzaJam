@@ -12,6 +12,8 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public Timer timer;
 
+	public PauseGame pause;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -70,6 +72,10 @@ public class PlayerBehavior : MonoBehaviour {
 			if (playerHealth == 0) {
 				//Death
 			}
+		}		
+		if(other.gameObject.tag == "goal") {
+			Debug.Log("hit goal");
+			pause.setHitEnd(true);
 		}
 	}
 	void OnCollisionEnter(Collision col) { 

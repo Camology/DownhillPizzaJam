@@ -71,8 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4232803850233604}
   - component: {fileID: 65974569972374888}
-  - component: {fileID: 114235623536103612}
-  - component: {fileID: 54664862803251206}
+  - component: {fileID: 114287791007485724}
   m_Layer: 0
   m_Name: Van
   m_TagString: damage
@@ -336,7 +335,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.31, y: 3.5989952, z: 6.2457895}
   m_Center: {x: 0, y: 1.5129299, z: 0.658689}
---- !u!114 &114235623536103612
+--- !u!114 &114287791007485724
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,7 +343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298265205032710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b9a6061dafb74d87ce26a065f47ea, type: 3}
+  m_Script: {fileID: 11500000, guid: d52f4450f5e5c4bd4bfe0b4fe2d35507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionObject: {fileID: 198458429322758708, guid: c154f8474aa319848b08acb7e686b5b5,
