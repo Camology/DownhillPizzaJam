@@ -10,15 +10,19 @@ public class Timer : MonoBehaviour {
 
 	}
 
-    float timer = 30.0f;
+    float timer = 50.00f;
     public Text text_box;
 
     // Update is called once per frame
     void Update () {
         timer -= Time.deltaTime;
-        text_box.text = timer.ToString("0.00");
+        text_box.text = "Tip: $"+ timer.ToString("0.00");
         if(timer < 0.0f) {
             text_box.text = "GAMEOVER!";
         }
+    }
+
+    public float getTime(){
+        return timer;
     }
 }
