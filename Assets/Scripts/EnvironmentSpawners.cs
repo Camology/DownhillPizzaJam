@@ -5,16 +5,20 @@ using UnityEngine;
 public class EnvironmentSpawners : MonoBehaviour {
 	public GameObject player;
 	public GameObject car;
+	public GameObject van;
 	public GameObject building;
 	public GameObject streetObj;
 	public GameObject street;
-	public float levelLength = 500f;
+	public MeshRenderer streetMesh;
+	public GameObject trashCan;
+	public GameObject flowerPot;
+	public float levelLength = 100f;
 	float playerHeight = 5f;
 
 	// Use this for initialization
 	void Start () {
 		street = Instantiate(streetObj);
-		MeshRenderer streetMesh = street.GetComponent<MeshRenderer>();
+		streetMesh = street.GetComponent<MeshRenderer>();
 		float initPosX = street.transform.position.x - streetMesh.bounds.size.x / 2.0f;
 		Vector3 temp = street.transform.localScale;
 		float logScale = Mathf.Ceil(Mathf.Log10(temp.x));
@@ -25,8 +29,10 @@ public class EnvironmentSpawners : MonoBehaviour {
 		temp.x = initPosX + streetMesh.bounds.size.x / 2.0f;
 		temp.y -= playerHeight;
 		street.transform.position = temp;
-		InvokeRepeating("SpawnCar",0,1f);
+		InvokeRepeating("SpawnCar",1,1f);
 		SpawnBuildings();
+		spawnTrash();
+		SpawnFlowers();
 	}
 	
 	// Update is called once per frame
@@ -35,11 +41,27 @@ public class EnvironmentSpawners : MonoBehaviour {
 	}
 
 	void SpawnCar() {
-        GameObject newCar = Instantiate(car);
-		newCar.transform.position = player.transform.position;
-		Vector3 temp = new Vector3(30.0f,0,0);
-		newCar.transform.position += temp;
-		Destroy(newCar,3f);
+		float carOrVan= Random.Range(0f,2f);
+		GameObject vehicle;
+		if (carOrVan < 1) {
+			vehicle = Instantiate(car);
+		}
+		else {
+			vehicle = Instantiate(van);
+		}
+		float leftVsRight = Random.Range(0f,2f);
+		float zPos;
+		if (leftVsRight < 1) {
+			zPos = Random.Range(1f,8f);
+		}
+		else {
+			zPos = Random.Range(-8f, -1f);
+		}
+		Vector3 temp = player.transform.position;
+		temp.x += 30.0f;
+		temp.z = zPos;
+		vehicle.transform.position = temp;
+		Destroy(vehicle,3f);
     }
 	void SpawnBuildings() {
 		float lengthCovered = 0f;
@@ -50,9 +72,7 @@ public class EnvironmentSpawners : MonoBehaviour {
 		bool firstLoop = true;
 
 		Vector3 temp;
-		Debug.Log("street wdith"+levelLength);
 		while (lengthCovered < streetLength) {
-			Debug.Log("length covered: "+lengthCovered);
 			GameObject newBuilding = Instantiate(building);
 			MeshRenderer mesh = newBuilding.GetComponent<MeshRenderer>();
 			
@@ -92,6 +112,40 @@ public class EnvironmentSpawners : MonoBehaviour {
 			tempPos.z -= (streetWidth + buildingWdith);
 
 			mirrorBuilding.transform.position = tempPos;
+		}
+	}
+
+	void spawnTrash() {
+		float lengthCovered = 20f;
+		while (lengthCovered < levelLength) {
+			float separation = Random.Range(5f,30f);
+			GameObject newTrash = Instantiate(trashCan);
+			newTrash.transform.position = player.transform.position;
+			Vector3 temp = newTrash.transform.position;
+			temp.x = -100f + lengthCovered;
+			temp.y = street.transform.position.y;
+			temp.z = street.transform.position.z - streetMesh.bounds.size.z / 2f + 2.3f;
+			newTrash.transform.position = temp;
+
+			float trashWidth = 0f;
+			lengthCovered += separation + trashWidth;
+		}
+	}
+
+	void SpawnFlowers() {
+		float lengthCovered = 20f;
+		while (lengthCovered < levelLength) {
+			float separation = 30f;
+			GameObject newBed = Instantiate(flowerPot);
+			newBed.transform.position = player.transform.position;
+			Vector3 temp = newBed.transform.position;
+			temp.x = -100f + lengthCovered;
+			temp.y = street.transform.position.y;
+			temp.z = 0f;
+			newBed.transform.position = temp;
+
+			float bedWidth = 0f;
+			lengthCovered += separation + bedWidth;
 		}
 	}
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658786, g: 0.4964227, b: 0.5748251, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -495,6 +495,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 127473556}
   m_CullTransparentMesh: 0
+--- !u!1001 &138240132
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -129.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 18.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481933393598630, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &195184485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,9 +2913,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 103574160}
   car: {fileID: 1091000492684818, guid: 44c156fe5c175c049842e9846191d15c, type: 2}
+  van: {fileID: 1298265205032710, guid: b38f74440afc549a0bc77f444d79bc41, type: 2}
   building: {fileID: 1709194760055398, guid: 1d60906a857b34f5b90a2e908110e559, type: 2}
   streetObj: {fileID: 1997582440327076, guid: b59ca2fbab71b42fbb16a1b17aba8512, type: 2}
   street: {fileID: 1997582440327076, guid: b59ca2fbab71b42fbb16a1b17aba8512, type: 2}
+  streetMesh: {fileID: 0}
+  trashCan: {fileID: 1849977688766262, guid: c971e041d514f9e4eac0ae4f0e810caf, type: 2}
+  flowerPot: {fileID: 1017204624945450, guid: e753e54e46a034c8090a3ceaf0ffc14c, type: 2}
   levelLength: 500
 --- !u!4 &1858461277
 Transform:

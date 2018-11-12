@@ -1,27 +1,17 @@
 fileFormatVersion: 2
-guid: 873768c0eb34b78418a992289795e7dc
+guid: 4302c718376da424898611c72427a89c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: TrashCan
-    100002: //RootNode
-    100004: trashCanLid
-    400000: TrashCan
-    400002: //RootNode
-    400004: trashCanLid
-    2100000: trashCan
-    2300000: TrashCan
-    2300002: trashCanLid
-    3300000: TrashCan
-    3300002: trashCanLid
-    4300000: trashCanLid
-    4300002: TrashCan
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: trashCan
-    second: {fileID: 2100000, guid: 53f7d40d98288d245b99e059763475db, type: 2}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: WinTextMaterial
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Text
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -98,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

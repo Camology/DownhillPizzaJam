@@ -1,27 +1,23 @@
 fileFormatVersion: 2
-guid: 873768c0eb34b78418a992289795e7dc
+guid: 4c87968f566895740baf8d394addb67b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: TrashCan
-    100002: //RootNode
-    100004: trashCanLid
-    400000: TrashCan
-    400002: //RootNode
-    400004: trashCanLid
-    2100000: trashCan
-    2300000: TrashCan
-    2300002: trashCanLid
-    3300000: TrashCan
-    3300002: trashCanLid
-    4300000: trashCanLid
-    4300002: TrashCan
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: trashCan
-    second: {fileID: 2100000, guid: 53f7d40d98288d245b99e059763475db, type: 2}
+    100000: Camera
+    100002: Lamp
+    100004: //RootNode
+    100006: Text
+    400000: Camera
+    400002: Lamp
+    400004: //RootNode
+    400006: Text
+    2000000: Camera
+    2100000: WinTextMaterial
+    2300000: Text
+    3300000: Text
+    4300000: Text
+    10800000: Lamp
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
