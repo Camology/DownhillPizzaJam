@@ -10,6 +10,8 @@ public class PlayerBehavior : MonoBehaviour {
 	int score = 0;
 	int playerHealth = 6;
 
+	public Timer timer;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
@@ -111,5 +113,11 @@ public class PlayerBehavior : MonoBehaviour {
 
 	public void setHealth(int h) {
 		this.playerHealth = h;
+	}
+
+	public float generateScore() {
+		float time = timer.getTime();
+
+		return this.playerHealth + time; 
 	}
 }
