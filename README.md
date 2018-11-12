@@ -5,5 +5,5 @@ Full game available here: https://camology.github.io/DownhillPizzaJam-WebGL/inde
 
 A and D to move, W to jump. Sometimes it freezes just press escape twice.
 
-Music is Better by Saint Pepsi https://www.youtube.com/watch?v=WYvji5AXOfk
-Using Retro3D Pipeline by Keijiro https://github.com/keijiro/Retro3DPipeline
+   Music is Better by Saint Pepsi https://www.youtube.com/watch?v=WYvji5AXOfk   
+   Using Retro3D Pipeline by Keijiro https://github.com/keijiro/Retro3DPipeline   
