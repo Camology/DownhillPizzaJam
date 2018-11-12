@@ -27,7 +27,7 @@ public class PlayerBehavior : MonoBehaviour {
 			}
 
 		if(rb.velocity.y < 3 && !onRoad) {
-			rb.AddForce(0,-25f,0,ForceMode.Acceleration);
+			rb.AddForce(0,-20f,0,ForceMode.Acceleration);
 		}
 		if(Mathf.Abs(rb.rotation.z) > 0.2f || this.initialRotation.x - rb.rotation.x > 0f) {
 			Vector3 newDir = Vector3.RotateTowards(transform.forward,new Vector3(this.initialRotation.x,-this.initialRotation.y,0), 0.12f * Time.deltaTime, 0.0f);
