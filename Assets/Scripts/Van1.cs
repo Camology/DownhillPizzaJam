@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Van1 : MonoBehaviour {
+	private Rigidbody rbody;
 	public ParticleSystem explosionObject;
 	void Start() {
+		rbody = GetComponent<Rigidbody>();
 	}
 
 	void Update() {
+		if (Time.timeScale != 0){
+			rbody.AddForce(-20f,0,0);
+		} 
 		
 	}
 	void OnCollisionEnter(Collision other) {

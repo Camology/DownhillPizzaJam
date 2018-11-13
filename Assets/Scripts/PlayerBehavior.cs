@@ -67,12 +67,6 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (playerHealth > 0) {
-			--playerHealth;
-			if (playerHealth == 0) {
-				//Death
-			}
-		}		
 		if(other.gameObject.tag == "goal") {
 			Debug.Log("hit goal");
 			pause.setHitEnd(true);
@@ -95,7 +89,6 @@ public class PlayerBehavior : MonoBehaviour {
 		if(col.gameObject.tag == "rail") {
 			this.transform.rotation = new Quaternion(0,90,0,0);
 			onRoad = true;
-
 		} 
 
     }
